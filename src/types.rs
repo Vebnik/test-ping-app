@@ -4,7 +4,11 @@ use clap::Parser;
 #[derive(Parser, Debug)]
 #[command(version, about, long_about = None)]
 pub struct Args {
-    /// Listen port
+    /// Binding port
     #[arg(short, long)]
     pub port: u16,
+
+    /// Listen addr
+    #[arg(short, long)]
+    pub addr: String
 }

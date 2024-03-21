@@ -29,7 +29,7 @@ async fn main() -> std::io::Result<()> {
             .service(ping_post)
 
     })
-    .bind(("127.0.0.1", args.port))?
+    .bind((args.addr, args.port))?
     .run()
     .await
 }
